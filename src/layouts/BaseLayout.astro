@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+import { company, navigation } from "../content/company";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = company.summary } = Astro.props;
+const currentPath = Astro.url.pathname;
+const pageTitle = title === company.name ? title : `${title} | ${company.name}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="nav-wrap">
+          <a class="brand-lockup" href="/" aria-label={`${company.name} home`}>
+            <img class="brand-logo" src="/assets/logo/junlee-logo.svg" alt="" />
+            <span class="brand-text">
+              <strong>{company.name}</strong>
+              <span>Watch distribution</span>
+            </span>
+          </a>
+          <nav class="nav-links" aria-label="Main navigation">
+            {
+              navigation.map((item) => (
+                <a href={item.href} aria-current={currentPath === item.href ? "page" : undefined}>
+                  {item.label}
+                </a>
+              ))
+            }
+          </nav>
+        </div>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <strong>{company.name}</strong>
+            <p>{company.registration}</p>
+          </div>
+          <div>
+            <p>
+              <a href={`mailto:${company.email}`}>{company.email}</a> ·
+              <a href={company.phoneHref}>{company.phoneDisplay}</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
