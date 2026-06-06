@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { productsPage } from "../content/pages";
+---
+
+<BaseLayout title="Products">
+  <PageHero eyebrow="Products" title={productsPage.title} intro={productsPage.intro} />
+
+  {
+    productsPage.sections.map((section, index) => (
+      <section class={`section ${index % 2 === 1 ? "alt" : ""}`}>
+        <div class="section-inner">
+          <div class="section-header">
+            <p class="eyebrow">Product line</p>
+            <h2>{section.title}</h2>
+            <p>{section.intro}</p>
+          </div>
+          <div class={`grid ${section.items.length > 2 ? "four" : "two"}`}>
+            {section.items.map((item) => (
+              <article class="card product-card">
+                <div class="logo-frame">
+                  <img src={item.logo} alt={`${item.title} logo`} />
+                </div>
+                <p class="eyebrow">{item.meta}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section info-band">
+    <div class="section-inner split">
+      <div>
+        <h2>Product coverage for suppliers and brand principals</h2>
+        <p>
+          Jun Lee Sdn Bhd offers a Malaysia distribution channel across front-of-store watch sales,
+          smart wearables, battery supply, and after-sales service parts.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Current product asset status</h3>
+        <p>
+          Brand logos are now in place. Product photography can be added later for watches,
+          smart watches, batteries, and watch glasses without changing the page structure.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
