@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { company } from "../content/company";
+import { contactPage } from "../content/pages";
+---
+
+<BaseLayout title="Contact">
+  <PageHero eyebrow="Contact" title={contactPage.title} intro={contactPage.intro} />
+
+  <section class="section">
+    <div class="section-inner split">
+      <div>
+        <h2>Direct contact</h2>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span>Email</span>
+            <a href={`mailto:${company.email}`}>{company.email}</a>
+          </div>
+          <div class="contact-row">
+            <span>Phone</span>
+            <a href={company.phoneHref}>{company.phoneDisplay}</a>
+          </div>
+          <div class="contact-row">
+            <span>Address</span>
+            <strong>{company.address}</strong>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>For business matters</h3>
+        <p>
+          Please include your organisation name, purpose of contact, relevant product or supply category,
+          and preferred contact details when emailing Jun Lee Sdn Bhd.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
