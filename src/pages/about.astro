@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { company } from "../content/company";
+import { aboutPage } from "../content/pages";
+---
+
+<BaseLayout title="About">
+  <PageHero eyebrow="About" title={aboutPage.title} intro={aboutPage.intro} />
+
+  <section class="section">
+    <div class="section-inner split">
+      <div>
+        <h2>Company information</h2>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span>Legal name</span>
+            <strong>{company.legalName}</strong>
+          </div>
+          <div class="contact-row">
+            <span>Registration</span>
+            <strong>{company.registration}</strong>
+          </div>
+          <div class="contact-row">
+            <span>Operating region</span>
+            <strong>{company.operatingRegion}</strong>
+          </div>
+          <div class="contact-row">
+            <span>Established</span>
+            <strong>{company.founded}</strong>
+          </div>
+        </div>
+      </div>
+      <div class="media-panel">
+        <img src="/assets/company/operations-placeholder.svg" alt="Company operations placeholder" />
+        <div class="placeholder-note">Replace with an office, team, storefront, warehouse, or operations image.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="section-inner">
+      <div class="grid three">
+        {
+          aboutPage.values.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
