@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { capabilitiesPage } from "../content/pages";
+---
+
+<BaseLayout title="Capabilities">
+  <PageHero eyebrow="Capabilities" title={capabilitiesPage.title} intro={capabilitiesPage.intro} />
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="grid two">
+        {
+          capabilitiesPage.capabilities.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
