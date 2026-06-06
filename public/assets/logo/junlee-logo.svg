@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.65 473.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        filter: url(#luminosity-invert-noclip);
+      }
+
+      .cls-4 {
+        fill: #be1e2d;
+      }
+    </style>
+    <filter id="luminosity-invert-noclip" x="0" y="0" width="460.65" height="473.83" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="cm" in2="bg"/>
+    </filter>
+    <mask id="mask" x="0" y="0" width="460.65" height="473.83" maskUnits="userSpaceOnUse">
+      <g class="cls-3">
+        <path class="cls-1" d="M182.52,187.45s-30.49,145.26-59.76,195.67c0,0-28.1,65.6-87.85,48.02,0,0-35.16-17.58,1.16-99.58,0,0,33.96-76.15,146.46-144.11"/>
+      </g>
+    </mask>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-2">
+      <path class="cls-4" d="M92.42,59.86L329.42,0l-30.89,113.58,162.11-69.46-102.91,370.51,102.91-30.89-7.74,25.74-218.7,64.35,115.81-365.4-56.63,23.17s-43.72,167.25-56.61,200.72c0,0-33.44,120.9-133.79,133.79,0,0-105.5,12.85-102.94-69.48,0,0-2.55-113.2,182.71-226.44l23.14-110.65-120.92,28.33,7.43-28Z"/>
+    </g>
+  </g>
+</svg>
