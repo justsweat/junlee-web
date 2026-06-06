@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { company } from "../content/company";
+import { homePage, capabilitiesPage } from "../content/pages";
+---
+
+<BaseLayout title={company.name}>
+  <section class="hero">
+    <div class="section-inner">
+      <div class="hero-content">
+        <p class="eyebrow">{homePage.eyebrow}</p>
+        <h1>{homePage.title}</h1>
+        <p class="lead">{homePage.intro}</p>
+        <div class="actions">
+          <a class="button" href="/capabilities/">View capabilities</a>
+          <a class="button secondary" href="/products/">View products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="section-inner split">
+      <div>
+        <p class="eyebrow">At a glance</p>
+        <h2>{company.tagline}</h2>
+        <p>{company.summary}</p>
+        <ul class="fact-list">
+          {homePage.highlights.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="media-panel">
+        <img src="/assets/products/watch-placeholder.svg" alt="Watch products placeholder" />
+        <div class="placeholder-note">Replace with real Roscani, U2, Aurafit, battery, or watch glass product photography.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Core scope</p>
+        <h2>Clear support across trading and supply workflows.</h2>
+      </div>
+      <div class="grid four">
+        {
+          capabilitiesPage.capabilities.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
