@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Watch distribution placeholder image</title>
+  <desc id="desc">Abstract watch, battery, and glass product placeholder for Jun Lee Sdn Bhd.</desc>
+  <rect width="1400" height="900" fill="#f6f7f4"/>
+  <rect x="130" y="120" width="1140" height="660" rx="28" fill="#ffffff"/>
+  <circle cx="515" cy="450" r="190" fill="#f4e8d3" stroke="#be1e2d" stroke-width="18"/>
+  <circle cx="515" cy="450" r="132" fill="#ffffff" stroke="#244452" stroke-width="16"/>
+  <path d="M515 344v106l76 58" fill="none" stroke="#244452" stroke-width="18" stroke-linecap="round"/>
+  <rect x="465" y="190" width="100" height="112" rx="28" fill="#244452"/>
+  <rect x="465" y="598" width="100" height="112" rx="28" fill="#244452"/>
+  <rect x="800" y="305" width="270" height="110" rx="18" fill="#244452"/>
+  <rect x="1082" y="336" width="36" height="48" rx="8" fill="#244452"/>
+  <rect x="832" y="338" width="132" height="18" rx="9" fill="#ffffff"/>
+  <rect x="832" y="374" width="190" height="18" rx="9" fill="#c9d5dc"/>
+  <circle cx="855" cy="555" r="72" fill="#c59a4a"/>
+  <circle cx="1015" cy="555" r="72" fill="#dce4e8"/>
+  <path d="M785 690h365" stroke="#47616f" stroke-width="18" stroke-linecap="round"/>
+</svg>
